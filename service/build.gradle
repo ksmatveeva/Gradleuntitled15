@@ -1,20 +1,17 @@
 plugins {
     id 'groovy'
+    id 'application'
 }
 
-group = 'org.example'
-version = '1.0-SNAPSHOT'
+application {
+    mainClassName = 'ru.netology.Main'
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'org.apache.groovy:groovy:4.0.14'
-    testImplementation platform('org.junit:junit-bom:5.9.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
-
-test {
-    useJUnitPlatform()
+    implementation project(':db')
+    implementation project(':api')
 }

@@ -1,0 +1,18 @@
+plugins {
+    id 'groovy'
+    id 'application'
+}
+
+application {
+    mainClassName = 'ru.netology.Main'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(":db")
+    implementation project(":service")
+    implementation 'org.codehaus.groovy:groovy-all:3.0.9'
+}

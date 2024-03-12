@@ -1,17 +1,14 @@
 plugins {
-    id 'groovy'
-    id 'application'
+    id 'java'
 }
 
-application {
-    mainClassName = 'ru.netology.Main'
-}
+group 'ru.netology'
+version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation project(':db')
-    implementation project(':api')
+
 }
